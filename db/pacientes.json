@@ -1,0 +1,24 @@
+{"fichas" : 
+
+	[
+		{
+			"oid" : "0",
+			"nome" : "Daniel Cavalcanti",
+			"nascimento" : "1988-02-10",
+			"fichaPapel" : true
+		}
+	],
+
+ "agendados" :
+
+ 	[
+ 		{
+ 			"dia" : "4",
+ 			"mes" : "10",
+ 			"ano" : "2013",
+ 			"hora" : "1830",
+ 			"paciente" : "0"
+ 		}
+ 	]
+
+}
