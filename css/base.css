@@ -1,8 +1,8 @@
-/* line 1, ../sass/base.scss */
+/* line 3, ../sass/base.scss */
 
 .janela {
-  width: 600px;
-  height: 400px;
+  width: 1000px;
+  height: 600px;
   border: 5px solid #0F1153;
   border-top: 25px solid #0F1153;
   position: absolute;
@@ -11,4 +11,51 @@
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+/* line 15, ../sass/base.scss */
+
+.row > h1 {
+  padding: 0 15px;
+}
+
+/* line 18, ../sass/base.scss */
+
+.nav-list > li:last-child a {
+  border-bottom: 1px solid #cecece;
+}
+
+/* line 19, ../sass/base.scss */
+
+.nav-list > li a {
+  border-top: 1px solid #cecece;
+}
+
+/* line 21, ../sass/base.scss */
+
+.nav-list > li a:hover {
+  background-color: #666;
+  color: #efefef;
+}
+
+/* line 27, ../sass/base.scss */
+
+.nav-list > li > .nav-list {
+  background-color: #f5f5f5;
+}
+
+/* line 33, ../sass/base.scss */
+
+nav {
+  overflow-y: scroll;
+  min-height: 550px;
+  max-height: 550px;
+  padding-top: 15px;
+}
+
+/* line 39, ../sass/base.scss */
+
+nav.main > .nav {
+  background-color: #fff;
+  border: 1px solid #cecece;
 }

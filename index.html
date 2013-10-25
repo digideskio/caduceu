@@ -10,20 +10,31 @@
 	
 </head>
 <body>
-	<div class="janela">
+	<div class="">
 	<div class="container" ng-app="" id="caduceu">
 		<div class="row">
-			<div class="col-md-4">
-				<h1>Caduceu</h1>
+			<h1>Caduceu</h1>
+			<nav class="col-md-4 main">
+				<ul class="nav nav-list">
+					<li><a href="">Pacientes</a>
+						<ul class="nav nav-list sub-nav">
+							<li><a href="">+ Novo</a></li>
+							<li><a href="">Buscar</a></li>
+							<li><a href="">Inativos</a></li>
+						</ul>
+					</li>
+					<li><a href="">Agenda</a></li>
+					<li><a href="">Configurações</a></li>
+				</ul>
 				<h2>Testes</h2>
-			</div>
+			</nav>
 
 			<div class="col-md-8">
-				<form action="testes" role="form" class="form-horizontal">
+				<form action="testes" role="form" class="form-vertical">
 
 					<div class="form-group">
-						<label for="" class="control-label col-md-4">Nome</label>
-						<div class="col-md-8">
+						<label for="" class="control-label">Nome</label>
+						<div class="">
 							<input class="form-control" type="text" ng-model="teste">	
 						</div>
 						
@@ -33,8 +44,8 @@
 					</div>
 
 					<div class="form-group">
-						<label for="" class="control-label col-md-4">Nome</label>
-						<div class="col-md-8">
+						<label for="" class="control-label">Nome</label>
+						<div class="">
 							<input class="form-control" type="text">	
 						</div>
 						
@@ -44,8 +55,8 @@
 					</div>
 
 					<div class="form-group">
-						<label for="" class="control-label col-md-4">Idade</label>
-						<div class="col-md-8">
+						<label for="" class="control-label">Idade</label>
+						<div >
 							<input class="form-control" type="text" ng-model="data.testando">
 							<p>{{data.testando}}</p>	
 						</div>
@@ -56,8 +67,8 @@
 					</div>
 
 					<div class="form-group">
-						<label for="" class="control-label col-md-4">Profissão</label>
-						<div class="col-md-8">
+						<label for="" class="control-label">Profissão</label>
+						<div class="">
 							<input class="form-control" type="text">	
 						</div>
 						
@@ -67,8 +78,8 @@
 					</div>
 
 					<div class="form-group">
-						<label for="" class="control-label col-md-4">Ativo</label>
-						<div class="col-md-8">
+						<label for="" class="control-label">Ativo</label>
+						<div class="">
 							<div class="checkbox">
 								<label>
 									<input class="checkbox" type="checkbox"> what	
@@ -89,7 +100,7 @@
 
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-	
+
 	<script src="js/teste.js"></script>
 	<script src="js/caduceu.js"></script>
 </body>

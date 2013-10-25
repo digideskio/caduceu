@@ -12,7 +12,6 @@ Ego = {
   list: fs.readdirSync(dbPath),
   store: function(nomeArq) {
     var conteudo, x, _i, _len;
-    console.log(Subconcious[0].dados().get());
     for (_i = 0, _len = Subconcious.length; _i < _len; _i++) {
       x = Subconcious[_i];
       if (nomeArq === x.origem) {
@@ -20,6 +19,20 @@ Ego = {
       }
     }
     return fs.writeFileSync(dbPath + nomeArq, JSON.stringify(conteudo));
+  },
+  find: function(nomeArq) {
+    var indice, x, _i, _len;
+    for (_i = 0, _len = Subconcious.length; _i < _len; _i++) {
+      x = Subconcious[_i];
+      if (nomeArq === x.origem) {
+        indice = x.indice;
+      }
+    }
+    if (indice === void 0) {
+      return false;
+    } else {
+      return indice;
+    }
   }
 };
 
@@ -35,10 +48,9 @@ criarTaffy = function(db) {
     novo = {};
     novo.origem = arq;
     novo.dados = TAFFY(JSON.parse(db));
+    novo.indice = Subconcious.length;
     Subconcious.push(new Object(novo));
-    console.log(Subconcious[0].origem);
-    console.log(Subconcious[0].dados('Daniel').get());
-    return Ego.store('doutores.json');
+    return console.log(Ego.find('remedios.json'));
   }
 };
 

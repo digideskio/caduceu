@@ -9,9 +9,15 @@ Subconcious = [] #Um nível acima para o Taffy, pois posso lidar com vários arq
 Ego = {
 	list : fs.readdirSync(dbPath) #array
 	store : (nomeArq)-> #salva todas as informações da tabela em um arquivo
-		console.log(Subconcious[0].dados().get())
+		#console.log(Subconcious[0].dados().get())
 		conteudo = x.dados().get() for x in Subconcious when nomeArq is x.origem
 		fs.writeFileSync dbPath + nomeArq, JSON.stringify(conteudo)
+	find : (nomeArq)-> #encontra e retorna o índice do arquivo desejado
+		indice = x.indice for x in Subconcious when nomeArq is x.origem
+		if indice is undefined
+			false
+		else
+			indice
 }
 
 listaDeBancos = fs.readdirSync(dbPath) #array
@@ -25,10 +31,11 @@ criarTaffy = (db) ->
 		novo = {}
 		novo.origem = arq
 		novo.dados = TAFFY(JSON.parse(db))
+		novo.indice = Subconcious.length
 		Subconcious.push new Object novo
-		console.log Subconcious[0].origem
-		console.log(Subconcious[0].dados('Daniel').get())
-		Ego.store('doutores.json')
+		#console.log Subconcious[0].origem
+		#console.log(Subconcious[0].dados('Daniel').get())
+		console.log Ego.find('remedios.json')
 
 criarTaffy(db) for db in Ego.list
 
