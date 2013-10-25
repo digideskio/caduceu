@@ -1,4 +1,4 @@
-var Ego, Subconcious, TAFFY, criarTaffy, db, dbPath, fs, listaDeBancos, _i, _len, _ref;
+var Ego, Subconcious, TAFFY, criarTaffy, db, dbPath, fs, _i, _len, _ref;
 
 fs = require('fs');
 
@@ -35,8 +35,6 @@ Ego = {
     }
   }
 };
-
-listaDeBancos = fs.readdirSync(dbPath);
 
 criarTaffy = function(db) {
   var arq, novo, status;

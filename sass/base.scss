@@ -1,5 +1,11 @@
 @import 'compass/css3';
 
+//Cores
+$fio : #efefef;
+$fundo-escuro : #666666;
+$fundo-claro : #f5f5f5;
+$branco: #ffffff;
+
 .janela {
 	width: 1000px;
 	height: 600px;
@@ -15,17 +21,21 @@
 .row > h1 {padding: 0 15px;}
 
 .nav-list > li {
-	&:last-child a {border-bottom: 1px solid #cecece;}
+	&:last-child a {border-bottom: 1px solid $fio;}
 	a {
-		border-top: 1px solid #cecece;
+		border-top: 1px solid $fio;
 		&:hover {
-			background-color: #666;
-			color: #efefef;
+			background-color: $fundo-escuro;
+			color: $fio;
 		}
 	}
 
+	&.has-subnav > a {
+		box-shadow: 0 3px 4px -2px darken($fundo-escuro, 20);
+	}
+
 	& > .nav-list {
-		background-color: #f5f5f5;
+		background-color: $fundo-claro;
 		//border-left: 1px solid #cecece;
 	}
 }
@@ -40,4 +50,6 @@ nav {
 		background-color: #fff;
 		border: 1px solid #cecece;
 	}
-}	
+}
+
+@import 'abas';

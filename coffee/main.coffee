@@ -14,13 +14,13 @@ Ego = {
 		fs.writeFileSync dbPath + nomeArq, JSON.stringify(conteudo)
 	find : (nomeArq)-> #encontra e retorna o índice do arquivo desejado
 		indice = x.indice for x in Subconcious when nomeArq is x.origem
-		if indice is undefined
+		if indice is undefined 
 			false
 		else
 			indice
 }
 
-listaDeBancos = fs.readdirSync(dbPath) #array
+#listaDeBancos = fs.readdirSync(dbPath) #array
 
 criarTaffy = (db) ->
 	console.log('Lendo o arquivo %s', db)

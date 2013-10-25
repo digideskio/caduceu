@@ -1,0 +1,16 @@
+.abas {
+	border-left: 1px solid $fio;
+	border-radius: 5px 5px 0 0;
+	.abas-campo {
+		padding: 5px 10px;
+		border-bottom: 1px solid $fio;
+		background-color: $fundo-claro;
+
+		width: 50%;
+	}
+	.abas-valor {
+		padding: 5px 10px;
+		border-top: 1px solid $fio;
+		width: 50%;
+	}
+}	

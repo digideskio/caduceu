@@ -1,8 +1,9 @@
 var caduceu = angular.module('Caduceu', []);
 
 caduceu.factory('Pacientes', function() {
-	_pacientes = Ego.find('pacientes.json')
-	return {lista: Subconcious[_pacientes].dados().get()}
+	//_pacientes = Ego.find('pacientes.json')
+	//return {lista: Subconcious[_pacientes].dados().get()}
+	return {lista: pacientesTaffy}
 })
 
 var pacientes = function($scope, Pacientes) {
