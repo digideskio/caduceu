@@ -1,15 +1,28 @@
 ##Sigmund##
 
 Sigmund = require('commander')
-Sigmund.Command = Command
+Sigmund.diz = new Sigmund.Command()
+
+console.log Sigmund.diz
 
 Sigmund.version('0.0.1')
 
-console.log 'Bem-vinda a Sigmund, versão %s, em que posso ajudá-la?', Sigmund.version()
+logo = "\n
+,---.o                        |\n
+`---..,---.,-.-..   .,---.,---|\n
+    |||   || | ||   ||   ||   |\n
+`---'``---|` ' '`---'`   '`---'\n
+      `---'\n
+"
+
+console.log(logo)
+
+console.log 'Sigmund v%s', Sigmund.version()
 console.log Sigmund
+
 menu01 = ['Novo paciente', 'Listar pacientes', 'Sair']
 
-Sigmund.diz.choose menu01, (i)->
+Sigmund.choose menu01, (i)->
 	switch i
 		when 1 then Sigmund.criar('pacientes.js')
 		when 2 then Sigmund.listar('pacientes.js')
